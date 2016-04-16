@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta content="text/html; charset="utf-8">
+		<title>Matrix</title>
+		<link rel="stylesheet" href="b-matrix.css" type="text/css"/>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script type="text/javascript" src="b-matrix.js"></script>
+	</head>
+	<body style="margin:20%">
+		<div  ng-app="appMatrix" ng-controller="MatrixController as matrix" class="b-matrix" ng-mouseleave="matrix.leaveDiv()" ng-mouseover="matrix.overDiv()">
+			<table class="b-matrix__table">
+				<tbody>
+					<tr ng-repeat="row in matrix.digMap.square track by $index">
+						<td class="b-matrix__cell" ng-repeat="col in row track by $index" ng-mouseover="matrix.overTable($event)">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="b-matrix__delrow" ng-click="matrix.delRow()" ng-style="matrix.mStyleRow()" ng-show="matrix.isShowDelRow()"></div>
+			<div class="b-matrix__delcol" ng-click="matrix.delCol()" ng-style="matrix.mStyleCol()" ng-show="matrix.isShowDelCol()"></div>
+			<div class="b-matrix__addcol" ng-click="matrix.addCol()"></div>
+			<div class="b-matrix__addrow" ng-click="matrix.addRow()"></div>
+		</div>
+ 	</body>
+</html>

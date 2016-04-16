@@ -1,0 +1,75 @@
+﻿@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+ 
+ .b-matrix {
+    border: 1px solid #48aae6;
+}
+
+.b-matrix, .b-matrix__table {
+    position: relative;
+    float: left;
+}
+
+.b-matrix__cell {
+    background-color: #48aae6;
+    padding: 0px;
+    margin: 2px;
+}
+
+.b-matrix__addcol, .b-matrix__addrow, .b-matrix__delcol, .b-matrix__delrow, .b-matrix__cell {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.b-matrix__addcol, .b-matrix__addrow, .b-matrix__delcol, .b-matrix__delrow {
+    position: absolute;
+}
+
+.b-matrix__addcol, .b-matrix__addrow {
+    background-color: #f9a500;
+    transition: background-color 1s;
+}
+
+.b-matrix__addcol:hover, .b-matrix__addrow:hover {
+    background-color: #f1c970;
+}
+
+.b-matrix__addcol {
+    left: 100%;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.b-matrix__addrow {
+    top: 100%;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
+.b-matrix__delcol, .b-matrix__delrow {
+    background-color: #b20000;
+}
+
+.b-matrix__delrow {
+    right: 100%;
+    margin-right: 3px;
+}
+
+.b-matrix__delcol {
+    bottom: 100%;
+    margin-bottom: 3px;
+}
+
+.b-matrix__delcol:before, .b-matrix__delrow:before, .b-matrix__addrow:before, .b-matrix__addcol:before {
+    font-family:'FontAwesome', sans-serif;
+    color: white;
+    vertical-align: -100%;
+}
+
+.b-matrix__delcol:before, .b-matrix__delrow:before {
+    content:"\f068"
+}
+
+.b-matrix__addrow:before, .b-matrix__addcol:before {
+    content:"\f067"
+}
